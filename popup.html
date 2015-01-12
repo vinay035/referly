@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+    <head>        
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/handlebar.js"></script>        
+        <script src="scripts/popup.js"></script>
+
+        <link href="styles/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="styles/custom.css" rel="stylesheet" media="screen">		
+        <base target="_blank">
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header" style="float:none;text-align: center;padding-top: 5px;">
+                <a href="https://springrole.com/?hp=1"><img src="http://d3um7r3ha1xn0r.cloudfront.net/images/icon_logo_dark.png" class="logo" alt="SpringRole" width="120"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a rel="all-jobs" class="nav-link all-job-link">All Jobs</a>
+                    </li>
+                    <li>
+                        <a rel="recommended-jobs" class="nav-link recommended_jobs">Recommended Jobs</a>
+                    </li>                                        
+                    <li>
+                        <a rel="refer-people" class="nav-link refer_user">Refer users</a>
+                    </li>                                        
+                </ul>
+            </div>
+        </nav>
+        <div data-role="page" id="all-jobs" class="page">  
+            <section id="jobs-display">                
+            </section>            
+            <section id="jobs-nodisplay">
+                <div class="col-md-2 col-md-offset-5" style="text-align:center">
+                    <input type="button" id="refresh_jobs" value="Refresh Jobs">
+                </div>
+            </section>            
+        </div><!-- /page -->
+
+        <div data-role="page" id="recommended-jobs" class="page">
+            <section id="recommended_jobs-display">                
+            </section>            
+            <section id="recommended_jobs-nodisplay">
+                <div class="col-md-2 col-md-offset-5" style="text-align:center">
+                    <div id="toprec">
+                        <div class="desc text-center">
+                            Sorry, there are no recommendations for you right now. Please come back later.
+                        </div>                        
+                    </div>
+                    <a href="javascript:void(0);" data-target="preselect" class="btn-green btn-panel text-left" id="recommended_jobs" style="width:320px;">
+                        Search Job Recommendations<span class="arrow-wrapper"><span class="arrow"></span></span>
+                    </a>                    
+                </div>                
+            </section>            
+        </div><!-- /page -->
+
+        <div data-role="page" id="refer-people" class="page">
+            <section id="refer-list">                
+            </section>          
+            <section id="refer-list-nodisplay">   
+                <div class="col-md-2 col-md-offset-5" style="text-align:center">
+                    <div id="toprec">
+                        <div class="desc text-center">
+                            Sorry, there are no recommendations for you right now. Please come back later.
+                        </div>                        
+                    </div>
+                    <a href="javascript:void(0);" data-target="preselect" class="btn-green btn-panel text-left" id="refer_list" style="width:290px;">
+                        Search Recommendations<span class="arrow-wrapper"><span class="arrow"></span></span>
+                    </a>                    
+                </div>
+            </section>            
+        </div><!-- /page -->
+        <div data-role="page" id="login-plugin" class="page">
+            <section>
+                <div class="col-md-2 col-md-offset-5" style="text-align:center">
+                    <div id="toprec">
+                        <div class="desc text-center">
+                            You exist in a dynamic network powered by your social presence. Refer your friends to career opportunities, or be referred by them. Recruiting can't get any better.
+                        </div>                        
+                    </div>
+                    <a href="javascript:void(0);" data-target="preselect" class="btn-green btn-panel text-left" id="activate-link">
+                        Activate Plugin<span class="arrow-wrapper"><span class="arrow"></span></span>
+                    </a>                    
+                </div>                
+            </section>            
+        </div><!-- /page -->
+        <script id="sHomepageContent" type="text/x-handlebars-template">
+            {{#each data}}
+            <div class="row">
+            <div class="col-md-2 col-md-offset-5" style="text-align:center"><h4><a href="{{job_url}}" class="black">{{title}}</a></h4></div>            
+            <div class="col-md-2 col-md-offset-5" style="text-align:center"><a href="{{job_url}}"><img src="{{logo}}" height="50px;"></a></div>
+            <div class="col-md-2 col-md-offset-5" style="text-align:center"><h4>{{city}}, {{state}}</h4></div>            
+            <div class="col-md-2 col-md-offset-5" style="text-align:center">
+            <a href="{{job_url}}" class="btn-green btn-panel text-left">
+                        Learn More
+            <span class="arrow-wrapper"><span class="arrow"></span></span>
+            </a>                    
+            </div>                                                         
+            </div>
+            {{/each}}
+        </script>            
+
+        <script id="ContentReferPeople" type="text/x-handlebars-template">
+            {{#each data}}
+            <div class="row" id="{{link}}">
+            <div class="col-md-2 col-md-offset-5" style="text-align:center"><h4>{{name}}</h4></div>                        
+            <div class="col-md-2 col-md-offset-5" style="text-align:center"><h4>{{title}} {{company}}</h4></div>
+            <br />
+            <div class="col-md-2 col-md-offset-5" style="text-align:center">
+            <a class="btn-green btn-panel text-left refer_user_button" rel="{{link}}">
+                        Refer now
+            <span class="arrow-wrapper"><span class="arrow"></span></span>
+            </a>
+            </div>
+            </div>
+            {{/each}}
+        </script>            
+    </body>
+</html>

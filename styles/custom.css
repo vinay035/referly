@@ -1,0 +1,110 @@
+/**
+ * Chrome Extension Twitter Bootstrap 3 Template
+ * Custom CSS
+ *	
+ */
+
+body, section {			/* Change width and height to own preferences */
+	width: 500px;
+	height: 400px;
+	overflow-x: hidden;
+}
+
+/* Basic style tweaks */
+section { padding: 5px;}
+.navbar { margin-bottom: 2px; }
+
+.hide
+{
+    display: none;
+}
+
+.navbar {
+z-index: 1040;
+border: none;
+background-color: #fff;
+height: 70px;
+min-height: 0;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.nav>li>a {
+position: relative;
+display: block;
+padding: 15px 36px;
+}
+
+    a
+    {
+        cursor: pointer;
+    }
+    #toprec .desc {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .btn-green {
+        border-radius: 3px;
+        background-color: #6ab96c;
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#6AB96C', endColorstr='#4AB063');
+        background-image: -o-linear-gradient(-89deg, #6ab96c 0, #4ab063 100%);
+        background-image: -moz-linear-gradient(-89deg, #6ab96c 0, #4ab063 100%);
+        background-image: -ms-linear-gradient(-89deg, #6ab96c 0, #4ab063 100%);
+        background-image: linear-gradient(-179deg, #6ab96c 0, #4ab063 100%);
+        -moz-box-shadow: 0 2px 0 0 #4f8b4e;
+        box-shadow: 0 2px 0 0 #4f8b4e;
+    }
+    .btn-green {
+margin-top: 0;
+width: 260px;
+font-size: 22px;
+line-height: 28px;
+padding: 12px 0 12px 20px;
+}
+.btn-green {
+margin-top: 15px;
+width: 220px;
+display: inline-block;
+color: #fff;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+padding: 8px 0 8px 15px;
+}
+.text-left {
+text-align: left;
+}
+a,a:hover,a:focus {
+color: #fff;
+text-decoration: none;
+}
+.btn-green .arrow-wrapper .arrow {
+display: block;
+background: url('http://d3um7r3ha1xn0r.cloudfront.net/images/icon_sprite.png') no-repeat;
+background-size: 20px;
+background-position: 0 -20px;
+width: 20px;
+height: 28px;
+}
+.btn-green .arrow-wrapper {
+padding: 12px 15px 12px 20px;
+margin: -12px 0;
+}
+ .btn-green .arrow-wrapper {
+padding: 8px 10px 8px 16px;
+margin: -8px 0;
+float: right;
+}
+.btn-green .arrow-wrapper {
+border-radius: 0 3px 3px 0;
+background: rgba(0,0,0,0.1);
+}
+.row
+{
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 20px;
+}
+
+a.black
+{
+color: black;    
+}
